@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -21,40 +20,9 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/react": "19.0.11",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
     "tailwindcss": "^4"
   }
 }
-=======
-  "name": "vef2-2025-v3-synilausn",
-  "type": "module",
-  "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc",
-    "start": "node ./dist/index.js",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:coverage": "vitest --coverage"
-  },
-  "prisma": {
-    "seed": "tsx prisma/seed.ts"
-  },
-  "dependencies": {
-    "@hono/node-server": "^1.13.8",
-    "@hono/zod-validator": "^0.4.3",
-    "@prisma/client": "^6.4.1",
-    "hono": "^4.7.1",
-    "xss": "^1.0.15",
-    "zod": "^3.24.2"
-  },
-  "devDependencies": {
-    "@hono/eslint-config": "^1.0.2",
-    "@types/node": "^20.17.19",
-    "@vitest/coverage-v8": "^3.0.7",
-    "prisma": "^6.4.1",
-    "tsx": "^4.7.1",
-    "vitest": "^3.0.7"
-  }
-}
->>>>>>> 0f24e1a74a02459a2536bd441bec48f2e8181ade
