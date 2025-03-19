@@ -1,0 +1,12 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background: #f9fafb;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
