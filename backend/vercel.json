@@ -1,0 +1,21 @@
+{
+    "version": 2,
+
+    "buildCommand": "npm install && npx prisma generate && npx prisma db push && npx prisma db seed && npm run build",
+  
+    "builds": [
+      {
+        "src": "dist/src/index.js",
+        "use": "@vercel/node"
+      }
+    ],
+  
+
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/dist/src/index.js"
+      }
+    ]
+  }
+  
