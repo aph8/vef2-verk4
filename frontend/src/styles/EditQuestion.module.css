@@ -1,0 +1,236 @@
+.container {
+    background: linear-gradient(135deg, #ffffff, #eaf4ff);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .pageTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #0070f3;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  
+  .categoriesSection {
+    margin-bottom: 2rem;
+  }
+  
+  .sectionHeading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  .categoryList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .categoryItem {
+    background: #f1f5f9;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .categoryButton {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #0070f3;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .categoryButton:hover {
+    color: #005bb5;
+  }
+  
+  .questionsSection {
+    margin-bottom: 2rem;
+  }
+  
+  .questionList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .questionItem {
+    background: #f1f5f9;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .questionText {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .editButton {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .editButton:hover {
+    background-color: #005bb5;
+  }
+  
+  .editSection {
+    margin-top: 2rem;
+    background: linear-gradient(135deg, #ffffff, #eaf4ff);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formField {
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s;
+  }
+  
+  .formField:hover {
+    transform: scale(1.02);
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .input,
+  .textarea,
+  .select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #dfe7f3;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .input:focus,
+  .textarea:focus,
+  .select:focus {
+    border-color: #0070f3;
+    box-shadow: 0 0 8px rgba(0,112,243,0.3);
+    outline: none;
+  }
+  
+  .textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .answersWrapper {
+    margin-bottom: 1.5rem;
+  }
+  
+  .subHeading {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+  
+  .answerRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f5f9;
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .checkboxLabel {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .removeButton {
+    background-color: #e53e3e;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .removeButton:hover {
+    background-color: #c53030;
+  }
+  
+  .addButton {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+  }
+  
+  .addButton:hover {
+    background-color: #005bb5;
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(90deg, #0070f3, #005bb5);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .submitButton:hover {
+    transform: scale(1.02);
+  }
+  

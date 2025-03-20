@@ -1,3 +1,4 @@
+// pages/_app.js
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -5,6 +6,11 @@ import { Toaster } from 'react-hot-toast';
 import Spinner from '../components/Spinner';
 import '../styles/globals.css';
 
+/**
+ * Custom App component for Next.js with global layout, animations, and loading spinner.
+ * @param {{Component: React.ComponentType, pageProps: object, router: import('next/router').NextRouter}} props
+ * @returns {JSX.Element}
+ */
 function MyApp({ Component, pageProps, router }) {
   const nextRouter = useRouter();
   const [loading, setLoading] = useState(false);

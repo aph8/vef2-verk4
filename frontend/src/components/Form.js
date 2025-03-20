@@ -2,34 +2,24 @@ import { useState } from 'react';
 import Button from './Button';
 import styles from '../styles/Form.module.css';
 
+/**
+ * Generic Form component for rendering input fields and handling submission.
+ * @param {Object} props
+ * @param {(data: Object) => void} props.onSubmit - Callback called with form data on submit.
+ * @param {Object} [props.initialData={}] - Initial values for the form fields.
+ * @param {Array<Object>} [props.fields] - Array of field definitions.
+ * @returns {JSX.Element} The rendered form.
+ */
 const Form = ({ onSubmit, initialData = {}, fields }) => {
-  // Sjálfgefið reitaskema ef engin fields eru send inn
   const defaultFields = [
-    {
-      label: 'Titill:',
-      name: 'title',
-      type: 'text',
-      placeholder: 'Sláðu inn titil',
-    },
-    {
-      label: 'Lýsing:',
-      name: 'description',
-      type: 'text',
-      placeholder: 'Sláðu inn lýsingu',
-    },
+    { label: 'Titill:', name: 'title', type: 'text', placeholder: 'Sláðu inn titil' },
+    { label: 'Lýsing:', name: 'description', type: 'text', placeholder: 'Sláðu inn lýsingu' },
   ];
-
   const formFields = fields || defaultFields;
   const [formData, setFormData] = useState(initialData);
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit(formData);
-  };
+  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleSubmit = (e) => { e.preventDefault(); onSubmit(formData); };
 
   return (
     <div className={styles.container}>
@@ -57,5 +47,4 @@ const Form = ({ onSubmit, initialData = {}, fields }) => {
     </div>
   );
 };
-
 export default Form;

@@ -1,8 +1,12 @@
-// pages/[slug].js
 import { useState } from 'react';
 import Layout from '../../components/Layout';
 import { fetchCategory, fetchQuestionsByCategory } from '../../lib/api';
 
+/**
+ * QuestionCard component displays a single question with selectable answers and feedback.
+ * @param {{question: {id: string|number, text?: string, title?: string, answers: Array<{id: string|number, text: string, correct: boolean}>}}} props
+ * @returns {JSX.Element}
+ */
 function QuestionCard({ question }) {
   const [selectedAnswerId, setSelectedAnswerId] = useState(null);
   const [feedback, setFeedback] = useState('');
@@ -38,6 +42,11 @@ function QuestionCard({ question }) {
   );
 }
 
+/**
+ * CategoryPage component renders a list of questions for a given category.
+ * @param {{category: {name: string} | null, questions: Array<Object>}} props
+ * @returns {JSX.Element}
+ */
 export default function CategoryPage({ category, questions }) {
   if (!category) {
     return (
@@ -50,7 +59,6 @@ export default function CategoryPage({ category, questions }) {
 
   return (
     <Layout title={category.name}>
-      <h2>{category.name}</h2>
       {questions && questions.length > 0 ? (
         <div>
           {questions.map((question) => (
@@ -64,6 +72,11 @@ export default function CategoryPage({ category, questions }) {
   );
 }
 
+/**
+ * Fetches category and related questions server-side.
+ * @param {{params: {slug: string}, res: import('http').ServerResponse}} context
+ * @returns {Promise<{props: {category: object|null, questions: Array}}>} 
+ */
 export async function getServerSideProps({ params, res }) {
   try {
     const categorySlug = params.slug;

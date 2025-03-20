@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import styles from '../styles/CategoryForm.module.css';
 
+/**
+ * CategoryForm component renders a form for creating or editing a category.
+ * @param {Object} props
+ * @param {(data: Object) => void} props.onSubmit - Callback invoked with form data on submit.
+ * @param {Object} [props.initialData={}] - Initial values for the form fields.
+ * @returns {JSX.Element} The rendered category form.
+ */
 export default function CategoryForm({ onSubmit, initialData = {} }) {
   const [formData, setFormData] = useState(initialData);
 
@@ -11,6 +18,7 @@ export default function CategoryForm({ onSubmit, initialData = {} }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(formData);
+    setFormData({ title: '' });
   };
 
   return (
